@@ -102,7 +102,7 @@ def create_log_template(output_path="process_log_template.xlsx"):
     ws.merge_cells(f"A{qs_start+1}:C{qs_start+1}")
     ws[f"A{qs_start+1}"] = "Total Checks:"
     ws.merge_cells(f"D{qs_start+1}:F{qs_start+1}")
-    ws[f"D{qs_start+1}"] = f"=COUNTA(F{rm_start+2}:F{mp_start+6})"
+    ws[f"D{qs_start+1}"] = f"=COUNTA(F{rm_start+2}:F{rm_start+6},F{mp_start+2}:F{mp_start+6})"
     ws[f"D{qs_start+1}"].border = border
 
     ws.merge_cells(f"A{qs_start+2}:C{qs_start+2}")

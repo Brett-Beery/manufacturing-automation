@@ -206,6 +206,7 @@ def build_work_order(product, speed, work_order, start_date, end_date, order_qty
     ws.merge_cells(f"C{pp_start+1}:F{pp_start+1}")
     ws[f"C{pp_start+1}"] = specs["Post_Processing"]
     ws[f"C{pp_start+1}"].border = s["border"]
+    ws[f"F{pp_start+1}"].border = s["border"]
 
     ws.merge_cells(f"A{pp_start+2}:B{pp_start+2}")
     ws[f"A{pp_start+2}"] = "Notes:"
@@ -213,6 +214,7 @@ def build_work_order(product, speed, work_order, start_date, end_date, order_qty
     ws.merge_cells(f"C{pp_start+2}:F{pp_start+2}")
     ws[f"C{pp_start+2}"] = specs["Post_Process_Notes"]
     ws[f"C{pp_start+2}"].border = s["border"]
+    ws[f"F{pp_start+2}"].border = s["border"]
 
     # =====================
     # SHEET 2 - SETUP SHEET
